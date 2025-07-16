@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milan Dhal – Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366F1',
+            secondary: '#8B5CF6',
+            accent: '#F472B6',
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.2s ease-out',
+            slideUp: 'slideUp 1.2s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition duration-300 font-sans">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300 bg-white dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-primary dark:text-secondary">My World</h1>
+      <div class="space-x-6 text-sm">
+        <a href="#hero" class="hover:text-primary dark:hover:text-accent">Home</a>
+        <a href="#about" class="hover:text-primary dark:hover:text-accent">About</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-accent">Contact</a>
+        <button id="darkToggle" class="ml-4 px-3 py-1 rounded bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white pt-28 px-6 animate-fadeIn">
+    <!-- Decorative SVG -->
+    <div class="absolute top-0 left-0 w-full h-full -z-10 opacity-30">
+      <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#ffffff" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,138.7C640,139,800,117,960,112C1120,107,1280,117,1360,122.7L1440,128V0H1360C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0H0Z"></path>
+      </svg>
+    </div>
+    <img src="IMG-9055.jpg" alt="Milan Dhal" class="w-40 h-40 rounded-full border-4 border-white shadow-xl mb-6 animate-slideUp">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-2 animate-slideUp">Hi, I'm Milan Dhal</h1>
+    <p class="text-lg md:text-xl mb-6 text-slate-200 animate-slideUp">Full-Stack Developer • AI Enthusiast • UI Designer</p>
+    <a href="#contact" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full hover:bg-slate-100 transition animate-slideUp">Get in Touch</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-slate-100 dark:bg-slate-800 text-center relative">
+    <h2 class="text-3xl font-bold text-primary dark:text-secondary mb-8">About Me</h2>
+    <p class="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-12 animate-fadeIn">
+      I'm a developer who crafts intuitive interfaces, scalable backend systems, and AI-powered tools. From Django APIs to Tailwind designs, I bridge creativity and engineering. I believe in shipping fast, iterating smart, and learning forever.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 max-w-4xl mx-auto animate-slideUp">
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" />
+        <span class="mt-2 text-sm">HTML</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" />
+        <span class="mt-2 text-sm">CSS</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" />
+        <span class="mt-2 text-sm">JavaScript</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
+        <span class="mt-2 text-sm">Python</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="relative py-24 px-6 bg-white dark:bg-slate-900 text-center">
+    <!-- Wave SVG Divider -->
+    <div class="absolute top-0 left-0 w-full -z-10">
+      <svg viewBox="0 0 1440 100" class="w-full" preserveAspectRatio="none">
+        <path fill="#f1f5f9" d="M0,0 C600,100 800,0 1440,100 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
+    <h2 class="text-3xl font-bold text-secondary dark:text-pink-400 mb-6">Contact Me</h2>
+    <p class="text-lg text-slate-700 dark:text-slate-300 mb-8">Open to freelance, remote roles, and collaboration.</p>
+    <form action="mailto:milandhal@example.com" method="POST" class="max-w-xl mx-auto text-left animate-fadeIn">
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium">Name</label>
+        <input type="text" id="name" name="name" class="w-full p-3 border rounded-md dark:bg-slate-800 dark:border-slate-600" required />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium">Email</label>
+        <input type="email" id="email" name="email" class="w-full p-3 border rounded-md dark:bg-slate-800 dark:border-slate-600" required />
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-sm font-medium">Message</label>
+        <textarea id="message" name="message" rows="4" class="w-full p-3 border rounded-md dark:bg-slate-800 dark:border-slate-600" required></textarea>
+      </div>
+      <button type="submit" class="bg-primary text-white px-6 py-3 rounded hover:bg-indigo-700 transition">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 dark:bg-slate-800 text-center text-sm text-slate-500 dark:text-slate-400 py-6">
+    © <span id="year"></span> My World • Crafted with 💜 & Tailwind CSS
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle
+    document.getElementById('darkToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Navbar scroll background change
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-slate-200', 'dark:bg-slate-900', 'shadow-md');
+      } else {
+        navbar.classList.remove('bg-slate-200', 'dark:bg-slate-900', 'shadow-md');
+      }
+    });
+  </script>
+</body>
+</html>
